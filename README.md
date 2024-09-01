@@ -11,7 +11,7 @@
 You can open the UI Menu through `/custom`.
 ## Installation
 First of all download the script [here](https://en.wikipedia.org/wiki/N/A)
-Place it in `resources` folder then ensure it right before `menuv`'s execution
+Place it in `resources` folder then ensure it right after `menuv`'s execution
 e.g.
 ```bash
 ensure menuv
