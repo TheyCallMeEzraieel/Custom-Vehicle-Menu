@@ -5,7 +5,7 @@
 - [Preview](#Preview)
 - [License](#License)
 ## Dependencies
-[MenuV](https://github.com/ThymonA/menuv)
+- [MenuV](https://github.com/ThymonA/menuv)
 ## Description
 `qb-customvehicle` currently is a **Vehicle Mods Customization** menu and it would only work for administration permissions.
 You can open the UI Menu through `/custom`.
@@ -18,8 +18,8 @@ ensure menuv
 ensure qb-customvehicle
 ```
 ## Preview
-Will be placed at the right time.
+Will be placed at the right time 🚀.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
