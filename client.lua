@@ -87,9 +87,9 @@ menu2:AddButton({
 -- Visual Mods Menu
 local mods_menu1 = MenuV:CreateMenu(false, 'Spoiler Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'spoiler')
 local mods_menu2 = MenuV:CreateMenu(false, 'Front Bumper Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'frontbumper')
-local mods_menu3 = MenuV:CreateMenu(false, 'Front Bumper Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'reardiffuser')
-local mods_menu4 = MenuV:CreateMenu(false, 'Rear Diffuser Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'skirt')
-local mods_menu5 = MenuV:CreateMenu(false, 'Skirt Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'bonnet')
+local mods_menu3 = MenuV:CreateMenu(false, 'Rear Diffuser Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'reardiffuser')
+local mods_menu4 = MenuV:CreateMenu(false, 'Skirt', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'skirt')
+local mods_menu5 = MenuV:CreateMenu(false, 'Bonnet', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'bonnet')
 local mods_menu6 = MenuV:CreateMenu(false, 'Mirrors Menu', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'mirrors')
 local mods_menu7 = MenuV:CreateMenu(false, 'Wheel Type', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'wheeltype')
 local mods_menu8 = MenuV:CreateMenu(false, 'Wheels', ConfigMenu.MenuLocation, MenuColor[1], MenuColor[2], MenuColor[3], ConfigMenu.MenuSize, 'none', 'menuv', 'wheels')
@@ -247,8 +247,8 @@ local function modMenus(menu, icon, label, desc, modid, slider)
             value = menu,
             values = wheelValues
         })
-		wheelslider:On('update', function(item, key)
-			print('key', key)
+		wheelslider:On('select', function(_, value)
+			SetVehicleWheelType(vehicle, value)
 		end)
     end
 end
@@ -259,7 +259,6 @@ CreateThread(function()
     menu2_visuals:On('open', function()
 		menu2_visuals:ClearItems()
         for i = 0, #mods, 1 do 
-            print(mods[i].label)
             modMenus(mods[i].menu, mods[i].icon, mods[i].label, mods[i].desc, mods[i].id, mods[i].slider)
         end
     end)
