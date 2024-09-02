@@ -7,11 +7,11 @@
 ## Dependencies
 - [MenuV](https://github.com/ThymonA/menuv)
 ## Description
-`qb-customvehicle` currently is a **Vehicle Mods Customization** menu and it would only work for administration permissions.
-You can open the UI Menu through `/custom`.
+`qb-customvehicle` currently is a **Vehicle Mods Customization** menu and it would only work for administration permissions.__
+You can open the UI Menu through `/custom`.__
 ## Installation
-First of all download the script [here](https://en.wikipedia.org/wiki/N/A)
-Place it in `resources` folder then ensure it right after `menuv`'s execution
+First of all download the script [here](https://en.wikipedia.org/wiki/N/A)__
+Place it in `resources` folder then ensure it right after `menuv`'s execution__
 e.g.
 ```bash
 ensure menuv
