@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 author 'CodeRed🔴 & CodeBlue🔵'
-version '1.0.0'
+version '1.0.1'
 description 'Made with ❤️'
 
 shared_scripts {
